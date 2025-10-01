@@ -1,0 +1,98 @@
+[
+    {
+        "id" : 1,
+        "name" : "Book Store",
+        "title" : "Free Book lorem10 vsdaf sdfssfas saf",
+        "price" : 0,
+        "category" : "free",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    },
+    {
+        "id" : 2,
+        "name" : "Book Store",
+        "title" : "Paid Book lorem10 vsdaf sdfssfas saf",
+        "price" : 0,
+        "category" : "free",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    },
+    {
+        "id" : 3,
+        "name" : "Book Store",
+        "title" : "Paid Book lorem10 vsdaf sdfssfas saf",
+        "price" : 0,
+        "category" : "free",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    },
+    {
+        "id" : 4,
+        "name" : "Book Store",
+        "title" : "Free Book lorem10 vsdaf sdfssfas saf",
+        "price" : 0,
+        "category" : "free",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    },
+    {
+        "id" : 5,
+        "name" : "Book Store",
+        "title" : "Paid Book lorem10 vsdaf sdfssfas saf",
+        "price" : 0,
+        "category" : "free",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    },
+    {
+        "id" : 6,
+        "name" : "Book Store",
+        "title" : "Free Book lorem10 vsdaf sdfssfas saf",
+        "price" : 0,
+        "category" : "free",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    },
+    {
+        "id" : 7,
+        "name" : "Book Store",
+        "title" : "Paid Book lorem10 vsdaf sdfssfas saf",
+        "price" : 60,
+        "category" : "sports",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    },
+    {
+        "id" : 8,
+        "name" : "Book Store",
+        "title" : "Free Book lorem10 vsdaf sdfssfas saf",
+        "price" : 670,
+        "category" : "music",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    },
+    {
+        "id" : 9,
+        "name" : "Book Store",
+        "title" : "Paid Book lorem10 vsdaf sdfssfas saf",
+        "price" : 3540,
+        "category" : "sports",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    },
+    {
+        "id" : 10,
+        "name" : "Book Store",
+        "title" : "Free Book lorem10 vsdaf sdfssfas saf",
+        "price" : 4350,
+        "category" : "premium",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    },
+    {
+        "id" : 11,
+        "name" : "Book Store",
+        "title" : "Paid Book lorem10 vsdaf sdfssfas saf",
+        "price" : 0,
+        "category" : "free",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    },
+    {
+        "id" : 12,
+        "name" : "Book Store",
+        "title" : "Free Book lorem10 vsdaf sdfssfas saf",
+        "price" : 200,
+        "category" : "food",
+        "image" : "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg"
+    }
+]
