@@ -1,0 +1,30 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "Mern Project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumit9596/BookStore.git"
+  },
+  "author": "sumit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumit9596/BookStore/issues"
+  },
+  "homepage": "https://github.com/sumit9596/BookStore#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.3",
+    "nodemon": "^3.1.10"
+  }
+}

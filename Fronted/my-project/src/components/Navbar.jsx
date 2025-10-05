@@ -1,8 +1,14 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import Login from './Login';
+import { useAuth } from '../context/AuthProvider';
+import Logout from './Logout';
 
 function Navbar() {
+
+    const [authUser, setAuthUser] = useAuth()
+
+    // console.log(JSON.stringify(authUser));
 
 
     const [sticky, setSticky] = React.useState(false);
@@ -92,9 +98,11 @@ function Navbar() {
                                 </svg>
                             </label>
                         </div>
-                        <a className="btn m-2" onClick={()=>document.getElementById('my_modal_3').showModal()}>Login</a>
+                        {authUser ? <Logout /> :
+                            <a className="btn m-2" onClick={() => document.getElementById('my_modal_3').showModal()}>Login</a>
+                        }
                     </div>
-                    <Login/>
+                    <Login />
                 </div>
 
             </div>

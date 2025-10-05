@@ -30,7 +30,7 @@ function Banner() {
                         <div className="validator-hint hidden">Enter valid email address</div>
                     </div>
                     <div className='mx-10 my-5 flex gap-4'>
-                    <button className="btn btn-secondary">Secondary</button>
+                    <button className="btn btn-secondary">Get Started</button>
 
                     </div>
                 </div>
