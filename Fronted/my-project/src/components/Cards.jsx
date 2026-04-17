@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 function Cards({ item }) {
     const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
-    const [showBuyOptions, setShowBuyOptions] = useState(false);
 
     const defaultImage = "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=center";
 
@@ -21,8 +20,8 @@ function Cards({ item }) {
     return (
         <div>
             <div className='m-2 md:m-5 hover:scale-105 duration-300 rounded-lg'>
-                <div className="bg-white dark:bg-gray-800 w-full max-w-sm mx-auto shadow-md dark:shadow-gray-700 rounded-lg overflow-hidden hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
-                    <div className="relative">
+                <div className="bg-white dark:bg-gray-800 w-full max-w-sm mx-auto shadow-md dark:shadow-gray-700 rounded-lg hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow" style={{ overflow: 'visible' }}>
+                    <div className="relative" style={{ overflow: 'visible' }}>
                         {!imageLoaded && (
                             <div className="w-full h-48 bg-gradient-to-br from-gray-200 dark:from-gray-700 to-gray-300 dark:to-gray-600 animate-pulse flex items-center justify-center relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 dark:via-gray-400/10 to-transparent animate-pulse"></div>
@@ -68,49 +67,30 @@ function Cards({ item }) {
                                 by {item.author}
                             </p>
                         )}
-                        <div className="flex justify-between items-center mt-2 mb-3">
+                        <div className="flex justify-between items-center mt-3 mb-3">
                             {item.rating && (
-                                <div className="flex items-center gap-1">
-                                    <span className="text-yellow-500">★</span>
-                                    <span className="text-xs text-gray-700 dark:text-gray-300">{item.rating}</span>
+                                <div className="inline-flex items-center gap-1 bg-yellow-100 dark:bg-yellow-900/30 px-2.5 py-1 rounded-full">
+                                    <div className="flex items-center gap-0.5">
+                                        {[...Array(5)].map((_, i) => (
+                                            <span key={i} className={`text-sm ${i < Math.floor(item.rating) ? 'text-yellow-500' : 'text-gray-300 dark:text-gray-600'}`}>★</span>
+                                        ))}
+                                    </div>
+                                    <span className="text-xs font-semibold text-yellow-700 dark:text-yellow-400 ml-1">{item.rating}</span>
                                 </div>
                             )}
                             {item.pages && (
-                                <span className="text-xs text-gray-500 dark:text-gray-400">{item.pages} pages</span>
+                                <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2.5 py-1 rounded-full">{item.pages} pages</span>
                             )}
                         </div>
-                        <div className="flex justify-between items-center gap-2 relative">
-                            <div className="border border-gray-300 rounded px-3 py-1 text-xs font-semibold text-gray-700 dark:border-gray-600 dark:text-gray-300">
-                                ${item.price}
-                            </div>
-                            <div className="relative">
-                                <button 
-                                    onClick={() => setShowBuyOptions(!showBuyOptions)}
-                                    className="border border-gray-300 rounded px-3 py-1 text-xs font-semibold text-gray-700 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition cursor-pointer dark:border-gray-600 dark:text-gray-300 dark:hover:bg-pink-600"
-                                >
-                                    Buy Now ▼
-                                </button>
-                                {showBuyOptions && (
-                                    <div className="absolute top-full right-0 mt-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded shadow-lg z-10 min-w-48">
-                                        <a 
-                                            href={item.flipkart_url || "#"} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer"
-                                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 transition border-b dark:border-gray-700 flex items-center gap-2"
-                                        >
-                                            <span>🛒</span> Flipkart
-                                        </a>
-                                        <a 
-                                            href={item.amazon_url || "#"} 
-                                            target="_blank" 
-                                            rel="noopener noreferrer"
-                                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-orange-50 dark:hover:bg-gray-800 transition flex items-center gap-2"
-                                        >
-                                            <span>📦</span> Amazon
-                                        </a>
-                                    </div>
-                                )}
-                            </div>
+                        <div className="flex justify-end items-center gap-2">
+                            <a
+                                href={`https://www.google.com/search?q=${encodeURIComponent(item.name)} ${encodeURIComponent(item.author)} book buy`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="border border-gray-300 rounded px-3 py-1 text-xs font-semibold text-gray-700 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition cursor-pointer dark:border-gray-600 dark:text-gray-300 dark:hover:bg-pink-600 flex items-center gap-1"
+                            >
+                                <span>🔍</span> Buy Now
+                            </a>
                         </div>
                     </div>
                 </div>
