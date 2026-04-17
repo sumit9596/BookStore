@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 
 function SignUp() {
   const navigate = useNavigate();
@@ -25,11 +24,15 @@ function SignUp() {
         navigate("/", { replace: true });
       }
     } catch (error) {
-      console.error("There was an error!", error);
+      console.error("Error:", error);
       if (error.response && error.response.status === 400) {
-        toast.error("User already exists. Please login.");
+        toast.error(error.response.data.message || "User already exists. Please login.");
+      } else if (error.response && error.response.status === 500) {
+        toast.error(error.response.data.message || "Server error. Please try again.");
+      } else if (error.message === "Network Error" || !error.response) {
+        toast.error("Backend server not connected. Please try again later.");
       } else {
-        toast.error("An error occurred. Please try again.");
+        toast.error(error.response?.data?.message || "An error occurred. Please try again.");
       }
     }
   };
@@ -86,7 +89,6 @@ function SignUp() {
           </form>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
