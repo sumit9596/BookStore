@@ -59,11 +59,11 @@ function Cards({ item }) {
                                 {item.category}
                             </span>
                         </div>
-                        <p className="text-xs md:text-sm text-gray-600 line-clamp-2 mb-2">
+                        <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 line-clamp-2 mb-2">
                             {item.title}
                         </p>
                         {item.author && (
-                            <p className="text-xs text-gray-500 mb-1">
+                            <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
                                 by {item.author}
                             </p>
                         )}
@@ -71,11 +71,11 @@ function Cards({ item }) {
                             {item.rating && (
                                 <div className="flex items-center gap-1">
                                     <span className="text-yellow-500">★</span>
-                                    <span className="text-xs text-gray-700">{item.rating}</span>
+                                    <span className="text-xs text-gray-700 dark:text-gray-300">{item.rating}</span>
                                 </div>
                             )}
                             {item.pages && (
-                                <span className="text-xs text-gray-500">{item.pages} pages</span>
+                                <span className="text-xs text-gray-500 dark:text-gray-400">{item.pages} pages</span>
                             )}
                         </div>
                         <div className="flex justify-between items-center gap-2">

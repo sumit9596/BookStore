@@ -49,8 +49,8 @@ function FreeBook() {
     return (
         <>
             <div className="my-10 md:my-20 px-4">
-                <h1 className="font-semibold pb-3 text-xl md:text-3xl text-center">Free Books Collection</h1>
-                <p className="text-sm md:text-lg text-center max-w-3xl mx-auto">
+                <h1 className="font-semibold pb-3 text-xl md:text-3xl text-center text-gray-900 dark:text-white">Free Books Collection</h1>
+                <p className="text-sm md:text-lg text-center max-w-3xl mx-auto text-gray-700 dark:text-gray-200">
                     Start your reading journey with our carefully curated collection of free books.
                     Discover new authors, explore different genres, and expand your knowledge without spending a dime.
                 </p>

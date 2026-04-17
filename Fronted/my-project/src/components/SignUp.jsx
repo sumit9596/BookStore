@@ -25,7 +25,7 @@ function SignUp() {
 
     try {
       const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:4001';
-      const response = await axios.post(`${apiUrl}/user/signup`, userData);
+      const response = await axios.post(`${apiUrl}/users/signup`, userData);
       console.log(response.data);
       if (response.data) {
         toast.success("SignUp successful!");

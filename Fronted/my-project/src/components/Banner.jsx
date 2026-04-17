@@ -19,7 +19,7 @@ function Banner() {
                         <h1 className='text-2xl md:text-4xl font-bold mt-4 md:mt-8 mx-2 md:mx-6 items-center bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent'>
                             Discover Your Next <span className='text-pink-500'>Great Read</span>
                         </h1>
-                        <p className='mx-2 md:mx-6 my-5 text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed'>
+                        <p className='mx-2 md:mx-6 my-5 text-base md:text-lg text-gray-700 dark:text-white leading-relaxed'>
                             Explore our vast collection of books across all genres. From bestselling novels to educational resources,
                             find the perfect book that sparks your imagination and expands your knowledge.
                         </p>
