@@ -30,7 +30,7 @@ const booksData = [
         title: "Dystopian novel about totalitarianism and surveillance",
         price: 12,
         category: "fiction",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "George Orwell",
         rating: 4.6,
         pages: 328
@@ -40,7 +40,7 @@ const booksData = [
         title: "A romantic novel about love, marriage, and social class",
         price: 0,
         category: "free",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1543868519-726d14987a56?w=400&h=600&fit=crop",
         author: "Jane Austen",
         rating: 4.7,
         pages: 432
@@ -50,7 +50,7 @@ const booksData = [
         title: "Coming-of-age story about teenage rebellion",
         price: 14,
         category: "fiction",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "J.D. Salinger",
         rating: 4.3,
         pages: 277
@@ -70,7 +70,7 @@ const booksData = [
         title: "Epic fantasy adventure in Middle-earth",
         price: 25,
         category: "fantasy",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&h=600&fit=crop",
         author: "J.R.R. Tolkien",
         rating: 4.8,
         pages: 1216
@@ -80,7 +80,7 @@ const booksData = [
         title: "Exploration of human history from ancient times to modern age",
         price: 22,
         category: "non-fiction",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Yuval Noah Harari",
         rating: 4.6,
         pages: 443
@@ -100,7 +100,7 @@ const booksData = [
         title: "Understanding the strange ways people think about money",
         price: 19,
         category: "finance",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1543868519-726d14987a56?w=400&h=600&fit=crop",
         author: "Morgan Housel",
         rating: 4.5,
         pages: 256
@@ -110,7 +110,7 @@ const booksData = [
         title: "Memoir about a woman's quest for knowledge",
         price: 17,
         category: "biography",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?w=400&h=600&fit=crop",
         author: "Tara Westover",
         rating: 4.6,
         pages: 334
@@ -120,7 +120,7 @@ const booksData = [
         title: "A novel about infinite possibilities and second chances",
         price: 0,
         category: "free",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Matt Haig",
         rating: 4.4,
         pages: 288
@@ -140,7 +140,7 @@ const booksData = [
         title: "Philosophical novel about following your dreams",
         price: 13,
         category: "philosophy",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Paulo Coelho",
         rating: 4.5,
         pages: 208
@@ -150,7 +150,7 @@ const booksData = [
         title: "Michelle Obama's inspiring life story",
         price: 21,
         category: "biography",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Michelle Obama",
         rating: 4.8,
         pages: 448
@@ -160,7 +160,7 @@ const booksData = [
         title: "Counterintuitive approach to living a good life",
         price: 16,
         category: "self-help",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Mark Manson",
         rating: 4.3,
         pages: 224
@@ -170,7 +170,7 @@ const booksData = [
         title: "What the rich teach their kids about money",
         price: 14,
         category: "finance",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Robert Kiyosaki",
         rating: 4.2,
         pages: 336
@@ -180,7 +180,7 @@ const booksData = [
         title: "Glamorous Hollywood story of love and ambition",
         price: 18,
         category: "romance",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Taylor Jenkins Reid",
         rating: 4.6,
         pages: 400
@@ -190,7 +190,7 @@ const booksData = [
         title: "Mystery and coming-of-age in the marshes of North Carolina",
         price: 16,
         category: "mystery",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Delia Owens",
         rating: 4.7,
         pages: 384
@@ -200,7 +200,7 @@ const booksData = [
         title: "Psychological thriller about a woman's silence",
         price: 15,
         category: "thriller",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Alex Michaelides",
         rating: 4.4,
         pages: 336
@@ -210,7 +210,7 @@ const booksData = [
         title: "How we make decisions and solve problems",
         price: 23,
         category: "psychology",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Daniel Kahneman",
         rating: 4.5,
         pages: 499
@@ -220,7 +220,7 @@ const booksData = [
         title: "Toltec wisdom for personal freedom",
         price: 12,
         category: "spirituality",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Don Miguel Ruiz",
         rating: 4.6,
         pages: 160
@@ -230,7 +230,7 @@ const booksData = [
         title: "Dystopian adventure in Panem",
         price: 14,
         category: "young-adult",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Suzanne Collins",
         rating: 4.6,
         pages: 374
@@ -240,7 +240,7 @@ const booksData = [
         title: "Why we do what we do and how to change",
         price: 17,
         category: "self-help",
-        image: "https://m.media-amazon.com/images/I/51ZymMgQ83L._SX325_BO1,204,203,200_.jpg",
+        image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Charles Duhigg",
         rating: 4.4,
         pages: 371

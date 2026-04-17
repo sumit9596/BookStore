@@ -15,7 +15,8 @@ function Courses() {
   useEffect(() => {
     const getBooks = async () => {
       try {
-        const res = await axios.get("http://localhost:4001/books")
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:4001';
+        const res = await axios.get(`${apiUrl}/books`)
         console.log(res.data);
         setBook(res.data)
       } catch (err) {
