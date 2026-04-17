@@ -1,4 +1,4 @@
 {
-    "buildCommand": "cd Fronted/my-project && npm install --force && npm rebuild && npm run build",
+    "buildCommand": "cd Fronted/my-project && npm install && npm run build",
     "outputDirectory": "Fronted/my-project/dist"
 }

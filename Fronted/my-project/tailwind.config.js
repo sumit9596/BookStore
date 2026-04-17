@@ -7,9 +7,5 @@ export default {
     theme: {
         extend: {},
     },
-    plugins: [require('daisyui')],
-    daisyui: {
-        themes: ["light", "dark", "cupcake", "synthwave"],
-        darkMode: ["class", '[data-theme="dark"]'],
-    },
+    plugins: [],
 }
