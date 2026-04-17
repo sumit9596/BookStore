@@ -56,7 +56,7 @@ function Login() {
       {/* Modal Content */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
-          <div className="bg-white text-gray-800 rounded-lg shadow-2xl p-6 w-96 relative pointer-events-auto">
+          <div className="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-lg shadow-2xl p-6 w-96 relative pointer-events-auto">
             <form onSubmit={handleSubmit(onSubmit)}>
               <button
                 type="button"
@@ -72,7 +72,7 @@ function Login() {
               <input
                 type="email"
                 placeholder="Enter your Email"
-                className="border border-gray-300 rounded w-full mb-3 bg-gray-100 text-gray-800 px-3 py-2 focus:outline-none focus:border-blue-500"
+                className="border border-gray-300 dark:border-gray-600 rounded w-full mb-3 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-2 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400"
                 {...register("email", { required: true })}
               />
               {errors.email && <span className="text-red-600 text-sm">This field is required</span>}
@@ -81,7 +81,7 @@ function Login() {
               <input
                 type="password"
                 placeholder="Enter your Password"
-                className="border border-gray-300 rounded w-full mb-3 bg-gray-100 text-gray-800 px-3 py-2 focus:outline-none focus:border-blue-500"
+                className="border border-gray-300 dark:border-gray-600 rounded w-full mb-3 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-2 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400"
                 {...register("password", { required: true })}
               />
               {errors.password && <span className="text-red-600 text-sm">This field is required</span>}
@@ -90,9 +90,9 @@ function Login() {
                 <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded font-semibold hover:bg-blue-700 transition cursor-pointer">
                   Login
                 </button>
-                <p className="text-xs">
+                <p className="text-xs text-gray-600 dark:text-gray-400">
                   Not registered?{" "}
-                  <Link to="/signup" onClick={() => setShowModal(false)} className="text-blue-600 underline cursor-pointer font-semibold hover:text-blue-700 transition">
+                  <Link to="/signup" onClick={() => setShowModal(false)} className="text-blue-600 dark:text-blue-400 underline cursor-pointer font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition">
                     Sign Up
                   </Link>
                 </p>

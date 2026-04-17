@@ -39,7 +39,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className={`h-20 shadow-sm fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${sticky ? 'bg-gray-800 shadow-md text-white' : 'bg-white text-gray-800'}`}>
+            <nav className={`h-20 shadow-sm fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${sticky ? 'bg-gray-800 dark:bg-gray-900 shadow-md text-white' : 'bg-white dark:bg-gray-800 text-gray-800 dark:text-white'}`}>
                 <div className="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
                     {/* Logo */}
                     <Link to="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition">
@@ -47,7 +47,7 @@ function Navbar() {
                     </Link>
 
                     {/* Desktop Menu */}
-                    <ul className="hidden md:flex gap-8 items-center list-none">
+                    <ul className="hidden md:flex gap-8 items-center list-none text-gray-800 dark:text-gray-200">
                         {navItems}
                     </ul>
 
@@ -84,8 +84,8 @@ function Navbar() {
 
                 {/* Mobile Menu */}
                 {menuOpen && (
-                    <div className="md:hidden bg-white shadow-lg border-t">
-                        <ul className="flex flex-col gap-2 p-4 list-none">
+                    <div className="md:hidden bg-white dark:bg-gray-700 shadow-lg border-t border-gray-300 dark:border-gray-600">
+                        <ul className="flex flex-col gap-2 p-4 list-none text-gray-800 dark:text-gray-200">
                             {navItems}
                         </ul>
                     </div>

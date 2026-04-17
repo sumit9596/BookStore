@@ -17,7 +17,7 @@ function App() {
 
 
   return (
-    <>
+    <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
@@ -28,7 +28,7 @@ function App() {
         <Route path='/about' element={<About />} />
       </Routes>
       <Toaster position="top-center" />
-    </>
+    </div>
 
   )
 }

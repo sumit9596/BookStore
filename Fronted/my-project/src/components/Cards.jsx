@@ -20,12 +20,12 @@ function Cards({ item }) {
     return (
         <div>
             <div className='m-2 md:m-5 hover:scale-105 duration-300 rounded-lg'>
-                <div className="bg-white w-full max-w-sm mx-auto shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="bg-white dark:bg-gray-800 w-full max-w-sm mx-auto shadow-md dark:shadow-gray-700 rounded-lg overflow-hidden hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
                     <div className="relative">
                         {!imageLoaded && (
-                            <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 animate-pulse flex items-center justify-center relative overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-                                <div className="text-center text-gray-500 z-10">
+                            <div className="w-full h-48 bg-gradient-to-br from-gray-200 dark:from-gray-700 to-gray-300 dark:to-gray-600 animate-pulse flex items-center justify-center relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 dark:via-gray-400/10 to-transparent animate-pulse"></div>
+                                <div className="text-center text-gray-500 dark:text-gray-400 z-10">
                                     <div className="text-3xl mb-2">📚</div>
                                     <div className="text-xs">Loading book...</div>
                                 </div>
@@ -41,8 +41,8 @@ function Cards({ item }) {
                             style={{ display: imageLoaded ? 'block' : 'none' }}
                         />
                         {imageError && (
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                                <div className="text-center text-gray-600">
+                            <div className="absolute inset-0 bg-gradient-to-br from-gray-200 dark:from-gray-700 to-gray-300 dark:to-gray-600 flex items-center justify-center">
+                                <div className="text-center text-gray-600 dark:text-gray-400">
                                     <div className="text-4xl mb-2">📖</div>
                                     <div className="text-xs font-medium">Book Cover</div>
                                     <div className="text-xs opacity-50 mt-1">Image unavailable</div>
@@ -52,7 +52,7 @@ function Cards({ item }) {
                     </div>
                     <div className="p-4">
                         <div className="flex items-start justify-between gap-2 mb-2">
-                            <h2 className="text-sm md:text-base font-semibold text-gray-800 line-clamp-2 flex-1">
+                            <h2 className="text-sm md:text-base font-semibold text-gray-800 dark:text-gray-200 line-clamp-2 flex-1">
                                 {item.name}
                             </h2>
                             <span className="bg-pink-500 text-white text-xs px-2 py-1 rounded whitespace-nowrap">

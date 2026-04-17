@@ -13,8 +13,12 @@ export function ThemeProvider({ children }) {
     });
 
     useEffect(() => {
-        // Apply theme to HTML element
-        document.documentElement.setAttribute("data-theme", theme);
+        // Apply theme to HTML element using class
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
         localStorage.setItem("theme", theme);
     }, [theme]);
 

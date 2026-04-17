@@ -6,12 +6,12 @@ function About() {
     return (
         <div>
             <Navbar />
-            <div className="min-h-screen bg-gray-100 py-16">
+            <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-16">
                 <div className="container mx-auto px-4">
                     {/* Hero Section */}
                     <div className="text-center mb-16">
-                        <h1 className="text-3xl md:text-5xl font-bold text-base-content mb-6">About BookStore</h1>
-                        <p className="text-lg md:text-xl text-base-content/70 max-w-3xl mx-auto px-4">
+                        <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">About BookStore</h1>
+                        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-400 max-w-3xl mx-auto px-4">
                             Your gateway to a world of knowledge, imagination, and endless possibilities.
                             We're passionate about connecting readers with the books that will change their lives.
                         </p>
@@ -19,9 +19,9 @@ function About() {
 
                     {/* Mission Section */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-                        <div className="bg-base-100 p-6 md:p-8 rounded-lg shadow-lg">
-                            <h2 className="text-xl md:text-3xl font-semibold mb-6 text-base-content">Our Mission</h2>
-                            <p className="text-base-content/80 mb-4">
+                        <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg dark:shadow-gray-700">
+                            <h2 className="text-xl md:text-3xl font-semibold mb-6 text-gray-900 dark:text-white">Our Mission</h2>
+                            <p className="text-gray-700 dark:text-gray-400 mb-4">
                                 At BookStore, we believe that every person deserves access to quality literature
                                 that inspires, educates, and entertains. Our mission is to create a vibrant
                                 community of readers who discover new worlds through the power of books.
@@ -33,9 +33,9 @@ function About() {
                             </p>
                         </div>
 
-                        <div className="bg-base-100 p-6 md:p-8 rounded-lg shadow-lg">
-                            <h2 className="text-xl md:text-3xl font-semibold mb-6 text-base-content">Our Vision</h2>
-                            <p className="text-base-content/80 mb-4">
+                        <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg dark:shadow-gray-700">
+                            <h2 className="text-xl md:text-3xl font-semibold mb-6 text-gray-900 dark:text-white">Our Vision</h2>
+                            <p className="text-gray-700 dark:text-gray-400 mb-4">
                                 We envision a world where reading is not just a pastime, but a way of life.
                                 Where every individual has the opportunity to explore diverse perspectives,
                                 challenge their assumptions, and grow through the wisdom of great authors.

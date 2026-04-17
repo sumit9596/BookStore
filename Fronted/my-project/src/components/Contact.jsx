@@ -6,11 +6,11 @@ function Contact() {
     return (
         <div>
             <Navbar />
-            <div className="min-h-screen bg-base-200 py-16">
+            <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-16">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h1 className="text-2xl md:text-4xl font-bold text-base-content mb-4">Contact Us</h1>
-                        <p className="text-base md:text-lg text-base-content/70 max-w-2xl mx-auto px-4">
+                        <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Contact Us</h1>
+                        <p className="text-base md:text-lg text-gray-700 dark:text-gray-400 max-w-2xl mx-auto px-4">
                             Have questions about our books or need help with your order?
                             We're here to help! Reach out to us through any of the channels below.
                         </p>
@@ -18,33 +18,33 @@ function Contact() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* Contact Form */}
-                        <div className="bg-base-100 p-6 md:p-8 rounded-lg shadow-lg">
-                            <h2 className="text-xl md:text-2xl font-semibold mb-6 text-base-content">Send us a Message</h2>
+                        <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg dark:shadow-gray-700">
+                            <h2 className="text-xl md:text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Send us a Message</h2>
                             <form className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-base-content mb-2">First Name</label>
+                                        <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">First Name</label>
                                         <input
                                             type="text"
-                                            className="input input-bordered w-full bg-base-200"
+                                            className="w-full border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400"
                                             placeholder="Your first name"
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-base-content mb-2">Last Name</label>
+                                        <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">Last Name</label>
                                         <input
                                             type="text"
-                                            className="input input-bordered w-full bg-base-200"
+                                            className="w-full border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400"
                                             placeholder="Your last name"
                                         />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium text-base-content mb-2">Email</label>
+                                    <label className="block text-sm font-medium text-gray-900 dark:text-white mb-2">Email</label>
                                     <input
                                         type="email"
-                                        className="input input-bordered w-full bg-base-200"
+                                        className="w-full border border-gray-300 dark:border-gray-600 rounded px-3 py-2 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400"
                                         placeholder="your.email@example.com"
                                     />
                                 </div>

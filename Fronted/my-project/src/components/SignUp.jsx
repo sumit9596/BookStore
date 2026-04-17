@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import Login from "./Login";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Navbar from "./Navbar";
@@ -40,62 +39,54 @@ function SignUp() {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50">
-      <div className="border-2 border-gray-300 p-8 rounded-lg shadow-lg bg-white text-gray-800 w-96 relative">
-        <h3 className="font-bold text-lg mb-8 text-center">Sign Up</h3>
-        <button
-          onClick={handleClose}
-          className="absolute top-4 right-5 text-gray-800 hover:bg-gray-200 text-lg font-bold rounded-full w-8 h-8 flex items-center justify-center transition-all"
-        >
-          ✕
-        </button>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <p className="mb-2 font-semibold">Name</p>
-          <input
-            type="text"
-            placeholder="Enter your Name"
-            className="border border-gray-300 rounded w-full mb-3 bg-gray-100 text-gray-800 px-3 py-2 focus:outline-none focus:border-blue-500"
-            {...register("fullname", { required: true })}
-          />
-          {errors.fullname && <span className="text-red-600 text-sm">This field is required</span>}
+    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
+      <Navbar />
+      <div className="flex-grow flex justify-center items-center pt-20 pb-8">
+        <div className="border-2 border-gray-300 dark:border-gray-600 p-8 rounded-lg shadow-lg bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 w-96 relative">
+          <h3 className="font-bold text-lg mb-8 text-center">Sign Up</h3>
+          <button
+            onClick={handleClose}
+            className="absolute top-4 right-5 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 text-lg font-bold rounded-full w-8 h-8 flex items-center justify-center transition-all"
+          >
+            ✕
+          </button>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <p className="mb-2 font-semibold">Name</p>
+            <input
+              type="text"
+              placeholder="Enter your Name"
+              className="border border-gray-300 dark:border-gray-600 rounded w-full mb-3 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-2 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400"
+              {...register("fullname", { required: true })}
+            />
+            {errors.fullname && <span className="text-red-600 text-sm">This field is required</span>}
 
-          <p className="mb-2 mt-4 font-semibold">Email</p>
-          <input
-            type="email"
-            placeholder="Enter your Email"
-            className="border border-gray-300 rounded w-full mb-3 bg-gray-100 text-gray-800 px-3 py-2 focus:outline-none focus:border-blue-500"
-            {...register("email", { required: true })}
-          />
-          {errors.email && <span className="text-red-600 text-sm">This field is required</span>}
+            <p className="mb-2 mt-4 font-semibold">Email</p>
+            <input
+              type="email"
+              placeholder="Enter your Email"
+              className="border border-gray-300 dark:border-gray-600 rounded w-full mb-3 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-2 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400"
+              {...register("email", { required: true })}
+            />
+            {errors.email && <span className="text-red-600 text-sm">This field is required</span>}
 
-          <p className="mb-2 mt-4 font-semibold">Password</p>
-          <input
-            type="password"
-            placeholder="Enter your Password"
-            className="border border-gray-300 rounded w-full mb-3 bg-gray-100 text-gray-800 px-3 py-2 focus:outline-none focus:border-blue-500"
-            {...register("password", { required: true })}
-          />
-          {errors.password && <span className="text-red-600 text-sm">This field is required</span>}
+            <p className="mb-2 mt-4 font-semibold">Password</p>
+            <input
+              type="password"
+              placeholder="Enter your Password"
+              className="border border-gray-300 dark:border-gray-600 rounded w-full mb-3 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-2 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400"
+              {...register("password", { required: true })}
+            />
+            {errors.password && <span className="text-red-600 text-sm">This field is required</span>}
 
-          <div className="flex items-center mt-6 justify-between">
-            <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded font-semibold hover:bg-blue-700 transition cursor-pointer">
-              Sign Up
-            </button>
-            <p className="text-xs">
-              Have an account?{" "}
-              <button
-                type="button"
-                className="text-blue-600 underline cursor-pointer text-xs font-semibold hover:text-blue-700 transition"
-                onClick={() => document.getElementById("my_modal_3").showModal()}
-              >
-                Login
+            <div className="flex items-center mt-6 justify-center">
+              <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded font-semibold hover:bg-blue-700 transition cursor-pointer">
+                Sign Up
               </button>
-            </p>
-          </div>
-        </form>
+            </div>
+          </form>
+        </div>
       </div>
-
-      <Login />
+      <Footer />
     </div>
   );
 }
