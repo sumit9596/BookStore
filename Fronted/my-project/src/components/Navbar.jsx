@@ -11,10 +11,9 @@ function Navbar() {
     const [authUser, setAuthUser] = useAuth()
     const { theme, toggleTheme } = useTheme()
 
-    // console.log(JSON.stringify(authUser));
-
-
     const [sticky, setSticky] = React.useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 0) {
@@ -29,29 +28,77 @@ function Navbar() {
         }
     }, []);
 
-    const navItems = (<>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/course'>Books</Link></li>
-        <li><Link to='/contact'>Contact</Link></li>
-        <li><Link to='/about'>About</Link></li>
-    </>)
+    const navItems = (
+        <>
+            <li><Link to='/' className="hover:text-blue-500 transition">Home</Link></li>
+            <li><Link to='/course' className="hover:text-blue-500 transition">Books</Link></li>
+            <li><Link to='/contact' className="hover:text-blue-500 transition">Contact</Link></li>
+            <li><Link to='/about' className="hover:text-blue-500 transition">About</Link></li>
+        </>
+    )
+
     return (
         <>
-            <div>
-                <div className={`navbar bg-base-100 h-20 shadow-sm fixed top-0 right-0 left-0 ${sticky ? 'bg-gray-800 shadow-md' : 'bg-transparent'} transition-all z-50`}>
-                    <div className="navbar-start">
-                        <div className="dropdown">
-                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-                            </div>
-                            <ul
-                                tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                                {navItems}
-                            </ul>
-                        </div>
-                        <Link to="/" className="cursor-pointer font-bold text-2xl mr-10">Book Store</Link>
+            <nav className={`h-20 shadow-sm fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${sticky ? 'bg-gray-800 shadow-md text-white' : 'bg-white text-gray-800'}`}>
+                <div className="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
+                    {/* Logo */}
+                    <div className="text-2xl font-bold text-blue-600">
+                        BookStore
                     </div>
+
+                    {/* Desktop Menu */}
+                    <ul className="hidden md:flex gap-8 items-center">
+                        {navItems}
+                    </ul>
+
+                    {/* Right side buttons */}
+                    <div className="flex items-center gap-4">
+                        {/* Theme Toggle */}
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                        >
+                            {theme === 'light' ? '🌙' : '☀️'}
+                        </button>
+
+                        {/* Auth Buttons */}
+                        {authUser ? (
+                            <Logout />
+                        ) : (
+                            <Login />
+                        )}
+
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            className="md:hidden p-2"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                {/* Mobile Menu */}
+                {menuOpen && (
+                    <div className="md:hidden bg-white shadow-md">
+                        <ul className="flex flex-col gap-4 p-4">
+                            {navItems}
+                        </ul>
+                    </div>
+                )}
+            </nav>
+            <div className="h-20"></div>
+        </>
+    )
+}
+
+export default Navbar
+                            </ul >
+                        </div >
+    <Link to="/" className="cursor-pointer font-bold text-2xl mr-10">Book Store</Link>
+                    </div >
                     <div className="navbar-end">
                         <div className="navbar-center hidden lg:flex">
                             <ul className="menu menu-horizontal px-1">
@@ -105,9 +152,9 @@ function Navbar() {
                         }
                     </div>
                     <Login />
-                </div>
+                </div >
 
-            </div>
+            </div >
         </>
 
     )
