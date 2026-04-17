@@ -6,9 +6,20 @@ import Navbar from "./Navbar";
 
 function SignUp() {
   const navigate = useNavigate();
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const onSubmit = async (data) => {
+    // Validate inputs
+    if (!data.fullname || !data.email || !data.password) {
+      toast.error("Please fill all fields");
+      return;
+    }
+
+    if (data.password.length < 6) {
+      toast.error("Password must be at least 6 characters");
+      return;
+    }
+
     const userData = {
       fullname: data.fullname,
       email: data.email,
@@ -22,19 +33,21 @@ function SignUp() {
       if (response.data) {
         toast.success("SignUp successful!");
         localStorage.setItem("user", JSON.stringify(response.data.user));
+        reset(); // Clear form
         navigate("/", { replace: true });
       }
     } catch (error) {
       console.error("Error:", error);
       if (error.response && error.response.status === 400) {
-        toast.error(error.response.data.message || "User already exists. Please login.");
+        toast.error(error.response.data.message || "Email already registered. Use a different email or login.");
       } else if (error.response && error.response.status === 500) {
-        toast.error(error.response.data.message || "Server error. Please try again.");
-      } else if (error.message === "Network Error" || !error.response) {
-        toast.error("Backend server not connected. Please try again later.");
+        toast.error("Server error. Please try again.");
+      } else if (!error.response) {
+        toast.error("Cannot connect to server. Local backend not running.");
       } else {
-        toast.error(error.response?.data?.message || "An error occurred. Please try again.");
+        toast.error(error.response?.data?.message || "Signup failed. Please try again.");
       }
+      reset(); // Clear password on error for security
     }
   };
 
