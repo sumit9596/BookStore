@@ -70,8 +70,7 @@ function SignUp() {
               placeholder="Enter your Name"
               className={`border rounded w-full mb-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-2 focus:outline-none transition ${errors.fullname ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-400'}`}
               {...register("fullname", {
-                required: "Name is required",
-                minLength: { value: 2, message: "Name must be at least 2 characters" }
+                required: "Name is required"
               })}
             />
             {errors.fullname && <span className="text-red-600 text-xs mb-3 block">{errors.fullname.message}</span>}

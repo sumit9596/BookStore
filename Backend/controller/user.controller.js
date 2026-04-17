@@ -7,14 +7,11 @@ export const signUp = async (req, res) => {
         const { fullname, email, password } = req.body;
 
         // Validate inputs
-        if (!fullname || fullname.trim().length < 1) {
-            return res.status(400).json({ message: "Name is required" });
+        if (!fullname || !email || !password) {
+            return res.status(400).json({ message: "All fields are required" });
         }
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             return res.status(400).json({ message: "Invalid email format" });
-        }
-        if (!password) {
-            return res.status(400).json({ message: "Password is required" });
         }
 
         const existingUser = await User.findOne({ email: email.toLowerCase().trim() });
