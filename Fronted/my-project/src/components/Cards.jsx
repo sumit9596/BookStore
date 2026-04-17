@@ -84,15 +84,8 @@ function Cards({ item }) {
                             </div>
                             <button className="border border-gray-300 rounded px-3 py-1 text-xs font-semibold text-gray-700 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition cursor-pointer">
                                 Buy Now
-                            </button
-                        </div>
-                        <div className="flex justify-between items-center gap-2">
-                            <div className="border border-gray-300 rounded px-3 py-1 text-xs font-semibold text-gray-700">
-                                ${item.price}
-                            </div>
-                            <button className="border border-gray-300 rounded px-3 py-1 text-xs font-semibold text-gray-700 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition cursor-pointer">
-                                Buy Now
                             </button>
+                        </div>
                         </div>
                     </div>
                 </div>
