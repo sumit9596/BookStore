@@ -1,0 +1,13 @@
+{
+    "buildCommand": "cd Fronted/my-project && npm run build",
+    "outputDirectory": "Fronted/my-project/dist",
+    "env": {
+        "MONGO_URL": "@mongo_url",
+        "TOKEN_SECRET": "@token_secret"
+    },
+    "functions": {
+        "Backend/api/**/*.js": {
+            "runtime": "nodejs20.x"
+        }
+    }
+}

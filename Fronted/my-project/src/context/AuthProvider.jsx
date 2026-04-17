@@ -1,24 +1,21 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [authUser, setAuthUser] = useState(null);
+  const [authUser, setAuthUser] = useState(() => {
+    const storedUser = localStorage.getItem("user");
+    return storedUser ? JSON.parse(storedUser) : null;
+  });
 
-  // Load user from localStorage when app starts
+  // Optional: keep localStorage synced with authUser
   useEffect(() => {
-    const storedUser = localStorage.getItem("user"); // ✅ consistent key
-
-    if (storedUser) {
-      setAuthUser(JSON.parse(storedUser));
-      console.log("User loaded from localStorage:", JSON.parse(storedUser));
+    if (authUser) {
+      localStorage.setItem("user", JSON.stringify(authUser));
+    } else {
+      localStorage.removeItem("user");
     }
-    else {
-      console.log("No user found in localStorage");
-    }
-  }, []);
-
- 
+  }, [authUser]);
 
   return (
     <AuthContext.Provider value={[authUser, setAuthUser]}>

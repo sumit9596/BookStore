@@ -28,15 +28,31 @@ function FreeBook() {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     };
 
     return (
         <>
-            <div className="my-20">
-                <h1 className="font-semibold m-5 pb-3">Free Offered Courses</h1>
-                <p className="ml-5">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum sunt
-                    tempora deserunt libero facere nobis.
+            <div className="my-10 md:my-20 px-4">
+                <h1 className="font-semibold pb-3 text-xl md:text-3xl text-center">Free Books Collection</h1>
+                <p className="text-sm md:text-lg text-center max-w-3xl mx-auto">
+                    Start your reading journey with our carefully curated collection of free books.
+                    Discover new authors, explore different genres, and expand your knowledge without spending a dime.
                 </p>
             </div>
 

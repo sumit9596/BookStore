@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import Login from "./Login";
 import axios from "axios";
 import toast from "react-hot-toast";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function SignUp() {
   const navigate = useNavigate(); // ✅ useNavigate hook
@@ -23,7 +25,7 @@ function SignUp() {
         localStorage.setItem("user", JSON.stringify(response.data.user));
 
         // ✅ Navigate to home page after signup
-        navigate("/", { replace: true }); 
+        navigate("/", { replace: true });
       }
     } catch (error) {
       console.error("There was an error!", error);
@@ -35,45 +37,54 @@ function SignUp() {
     }
   };
 
+  const handleClose = () => {
+    navigate("/", { replace: true }); // Navigate back to the previous page
+  }
+
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="border-2 border-gray-700 p-8 rounded-lg shadow-lg bg-gray-900 w-96">
+      <div className="border-2 border-base-300 p-8 rounded-lg shadow-lg bg-base-100 text-base-content w-96 relative">
         <h3 className="font-bold text-lg mb-8 text-center">Sign Up</h3>
+        <button
+          onClick={handleClose}
+          className="absolute top-4 right-5 text-base-content hover:bg-base-300 text-lg font-bold rounded-full w-8 h-8 flex items-center justify-center transition-all">
+          ✕
+        </button>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <p className="mb-2">Name</p>
+          <p className="mb-2 font-semibold">Name</p>
           <input
             type="text"
             placeholder="Enter your Name"
-            className="border-none bg-gray-800 my-1 rounded p-1 pr-10 w-full"
+            className="input input-bordered w-full mb-3 bg-base-200 text-base-content"
             {...register("fullname", { required: true })}
           />
-          {errors.fullname && <span className="text-red-500 text-sm">This field is required</span>}
+          {errors.fullname && <span className="text-error text-sm">This field is required</span>}
 
-          <p className="mb-2 mt-4">Email</p>
+          <p className="mb-2 mt-4 font-semibold">Email</p>
           <input
             type="email"
             placeholder="Enter your Email"
-            className="border-none bg-gray-800 rounded p-1 pr-10 w-full"
+            className="input input-bordered w-full mb-3 bg-base-200 text-base-content"
             {...register("email", { required: true })}
           />
-          {errors.email && <span className="text-red-500 text-sm">This field is required</span>}
+          {errors.email && <span className="text-error text-sm">This field is required</span>}
 
-          <p className="mb-2 mt-4">Password</p>
+          <p className="mb-2 mt-4 font-semibold">Password</p>
           <input
             type="password"
             placeholder="Enter your Password"
-            className="border-none bg-gray-800 rounded p-1 pr-10 w-full"
+            className="input input-bordered w-full mb-3 bg-base-200 text-base-content"
             {...register("password", { required: true })}
           />
-          {errors.password && <span className="text-red-500 text-sm">This field is required</span>}
+          {errors.password && <span className="text-error text-sm">This field is required</span>}
 
           <div className="flex items-center mt-6 justify-between">
-            <button className="btn btn-secondary">Sign Up</button>
+            <button type="submit" className="btn btn-primary">Sign Up</button>
             <p className="text-xs">
               Have an account?{" "}
               <button
                 type="button"
-                className="text-blue-500 underline cursor-pointer text-xs"
+                className="text-info underline cursor-pointer text-xs font-semibold"
                 onClick={() => document.getElementById("my_modal_3").showModal()}
               >
                 Login
