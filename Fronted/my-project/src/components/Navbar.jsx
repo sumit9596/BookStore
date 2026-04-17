@@ -72,7 +72,7 @@ function Navbar() {
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setMenuOpen(!menuOpen)}
-                            className="md:hidden p-2"
+                            className="md:hidden p-2 ml-2"
                             title="Toggle menu"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
