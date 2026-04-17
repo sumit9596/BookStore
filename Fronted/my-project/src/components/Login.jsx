@@ -18,7 +18,8 @@ function Login() {
     };
 
     try {
-      const response = await axios.post("http://localhost:4001/user/login", userData);
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:4001';
+      const response = await axios.post(`${apiUrl}/user/login`, userData);
       console.log(response.data);
 
       if (response.data) {
