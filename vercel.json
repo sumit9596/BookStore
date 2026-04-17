@@ -1,4 +1,10 @@
 {
     "buildCommand": "cd Fronted/my-project && npm install && npm run build",
-    "outputDirectory": "Fronted/my-project/dist"
+    "outputDirectory": "Fronted/my-project/dist",
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
 }
