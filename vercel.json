@@ -1,9 +1,4 @@
 {
     "buildCommand": "cd Fronted/my-project && npm run build",
-    "outputDirectory": "Fronted/my-project/dist",
-    "functions": {
-        "Backend/api/**/*.js": {
-            "runtime": "nodejs20.x"
-        }
-    }
+    "outputDirectory": "Fronted/my-project/dist"
 }
