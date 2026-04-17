@@ -94,14 +94,10 @@ function SignUp() {
               placeholder="Enter your Password"
               className={`border rounded w-full mb-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-2 focus:outline-none transition ${errors.password ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-400'}`}
               {...register("password", {
-                required: "Password is required",
-                minLength: { value: 6, message: "Password must be at least 6 characters" }
+                required: "Password is required"
               })}
             />
             {errors.password && <span className="text-red-600 text-xs mb-3 block">{errors.password.message}</span>}
-            {!errors.password && password && (
-              <span className="text-green-600 text-xs mb-3 block">✓ Password valid ({password.length} characters)</span>
-            )}
 
             <div className="flex items-center mt-6 justify-center">
               <button
