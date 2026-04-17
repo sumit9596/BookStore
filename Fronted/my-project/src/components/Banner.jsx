@@ -19,13 +19,13 @@ function Banner() {
                         <h1 className='text-2xl md:text-4xl font-bold mt-4 md:mt-8 mx-2 md:mx-6 items-center bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent'>
                             Discover Your Next <span className='text-pink-500'>Great Read</span>
                         </h1>
-                        <p className='mx-2 md:mx-6 my-5 text-base md:text-lg text-base-content/80 leading-relaxed'>
+                        <p className='mx-2 md:mx-6 my-5 text-base md:text-lg text-gray-700 leading-relaxed'>
                             Explore our vast collection of books across all genres. From bestselling novels to educational resources,
                             find the perfect book that sparks your imagination and expands your knowledge.
                         </p>
                         <div className='mx-2 md:mx-6 my-5 flex flex-col sm:flex-row gap-3'>
-                            <label className="input validator w-full sm:w-auto bg-white/10 border-white/20 focus-within:border-pink-500 transition-colors">
-                                <svg className="h-[1em] opacity-70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <div className='flex items-center gap-2 w-full sm:w-auto bg-white/10 border border-white/20 rounded-lg px-4 py-2 focus-within:border-pink-500 transition-colors'>
+                                <svg className="h-5 w-5 opacity-70 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <g
                                         strokeLinejoin="round"
                                         strokeLinecap="round"
@@ -37,15 +37,14 @@ function Banner() {
                                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                                     </g>
                                 </svg>
-                                <input type="email" placeholder="Enter your email for updates" required className="w-full bg-transparent" />
-                            </label>
-                            <div className="validator-hint hidden">Enter valid email address</div>
+                                <input type="email" placeholder="Enter your email for updates" className="flex-1 bg-transparent outline-none text-white placeholder-gray-400" />
+                            </div>
                         </div>
                         <div className='mx-2 md:mx-6 my-5 flex flex-col sm:flex-row gap-4'>
-                            <button className="btn btn-secondary w-full sm:w-auto shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-pink-500 to-pink-600 border-none">
+                            <button className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl hover:from-pink-600 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 border-none cursor-pointer">
                                 Browse Books
                             </button>
-                            <button className="btn btn-outline w-full sm:w-auto border-white/30 hover:border-pink-500 hover:bg-pink-500/10 transition-all duration-300">
+                            <button className="w-full sm:w-auto px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:border-pink-500 hover:bg-pink-500/10 transition-all duration-300 cursor-pointer">
                                 Join Community
                             </button>
                         </div>

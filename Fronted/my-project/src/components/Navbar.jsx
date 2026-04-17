@@ -42,12 +42,12 @@ function Navbar() {
             <nav className={`h-20 shadow-sm fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${sticky ? 'bg-gray-800 shadow-md text-white' : 'bg-white text-gray-800'}`}>
                 <div className="max-w-7xl mx-auto px-4 h-full flex justify-between items-center">
                     {/* Logo */}
-                    <div className="text-2xl font-bold text-blue-600">
+                    <Link to="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition">
                         BookStore
-                    </div>
+                    </Link>
 
                     {/* Desktop Menu */}
-                    <ul className="hidden md:flex gap-8 items-center">
+                    <ul className="hidden md:flex gap-8 items-center list-none">
                         {navItems}
                     </ul>
 
@@ -57,6 +57,7 @@ function Navbar() {
                         <button
                             onClick={toggleTheme}
                             className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                            title="Toggle theme"
                         >
                             {theme === 'light' ? '🌙' : '☀️'}
                         </button>
@@ -72,9 +73,10 @@ function Navbar() {
                         <button
                             onClick={() => setMenuOpen(!menuOpen)}
                             className="md:hidden p-2"
+                            title="Toggle menu"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </button>
                     </div>
@@ -82,8 +84,8 @@ function Navbar() {
 
                 {/* Mobile Menu */}
                 {menuOpen && (
-                    <div className="md:hidden bg-white shadow-md">
-                        <ul className="flex flex-col gap-4 p-4">
+                    <div className="md:hidden bg-white shadow-lg border-t">
+                        <ul className="flex flex-col gap-2 p-4 list-none">
                             {navItems}
                         </ul>
                     </div>
@@ -95,9 +97,6 @@ function Navbar() {
 }
 
 export default Navbar
-                            </ul >
-                        </div >
-    <Link to="/" className="cursor-pointer font-bold text-2xl mr-10">Book Store</Link>
                     </div >
                     <div className="navbar-end">
                         <div className="navbar-center hidden lg:flex">
