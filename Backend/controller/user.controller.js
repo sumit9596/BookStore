@@ -6,7 +6,18 @@ export const signUp = async (req, res) => {
     try {
         const { fullname, email, password } = req.body;
 
-        const existingUser = await User.findOne({ email });
+        // Validate inputs
+        if (!fullname || fullname.trim().length < 2) {
+            return res.status(400).json({ message: "Name must be at least 2 characters" });
+        }
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            return res.status(400).json({ message: "Invalid email format" });
+        }
+        if (!password || password.length < 6) {
+            return res.status(400).json({ message: "Password must be at least 6 characters" });
+        }
+
+        const existingUser = await User.findOne({ email: email.toLowerCase().trim() });
         if (existingUser) {
             return res.status(400).json({ message: "User already exists" });
         }

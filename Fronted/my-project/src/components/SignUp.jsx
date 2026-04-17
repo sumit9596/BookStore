@@ -15,6 +15,7 @@ function SignUp() {
   });
 
   const password = watch("password");
+  const { isValid } = formState;
 
   const onSubmit = async (data) => {
     const userData = {
@@ -104,7 +105,14 @@ function SignUp() {
             )}
 
             <div className="flex items-center mt-6 justify-center">
-              <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded font-semibold hover:bg-blue-700 transition cursor-pointer">
+              <button
+                type="submit"
+                disabled={!isValid}
+                className={`text-white px-6 py-2 rounded font-semibold transition cursor-pointer ${isValid
+                    ? 'bg-blue-600 hover:bg-blue-700 cursor-pointer'
+                    : 'bg-gray-400 cursor-not-allowed opacity-60'
+                  }`}
+              >
                 Sign Up
               </button>
             </div>
