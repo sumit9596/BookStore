@@ -86,7 +86,6 @@ function Cards({ item }) {
                                 Buy Now
                             </button>
                         </div>
-                        </div>
                     </div>
                 </div>
             </div>

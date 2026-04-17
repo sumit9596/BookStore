@@ -15,7 +15,9 @@ function Logout() {
     navigate("/", { replace: true });
   }
   return (
-    <button onClick={handleLogout} className="btn btn-sm btn-error">Logout</button>
+    <button onClick={handleLogout} className="bg-red-600 text-white px-3 py-2 rounded text-sm font-semibold hover:bg-red-700 transition cursor-pointer">
+      Logout
+    </button>
   )
 }
 

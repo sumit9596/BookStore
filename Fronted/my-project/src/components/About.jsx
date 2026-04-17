@@ -6,7 +6,7 @@ function About() {
     return (
         <div>
             <Navbar />
-            <div className="min-h-screen bg-base-200 py-16">
+            <div className="min-h-screen bg-gray-100 py-16">
                 <div className="container mx-auto px-4">
                     {/* Hero Section */}
                     <div className="text-center mb-16">
