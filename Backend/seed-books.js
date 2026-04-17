@@ -13,7 +13,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop",
         author: "F. Scott Fitzgerald",
         rating: 4.5,
-        pages: 180
+        pages: 180,
+        flipkart_url: "https://www.flipkart.com/search?q=The+Great+Gatsby+F+Scott+Fitzgerald",
+        amazon_url: "https://www.amazon.in/s?k=The+Great+Gatsby+F+Scott+Fitzgerald"
     },
     {
         name: "To Kill a Mockingbird",
@@ -23,7 +25,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop",
         author: "Harper Lee",
         rating: 4.8,
-        pages: 376
+        pages: 376,
+        flipkart_url: "https://www.flipkart.com/search?q=To+Kill+a+Mockingbird+Harper+Lee",
+        amazon_url: "https://www.amazon.in/s?k=To+Kill+a+Mockingbird+Harper+Lee"
     },
     {
         name: "1984",
@@ -33,7 +37,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "George Orwell",
         rating: 4.6,
-        pages: 328
+        pages: 328,
+        flipkart_url: "https://www.flipkart.com/search?q=1984+George+Orwell",
+        amazon_url: "https://www.amazon.in/s?k=1984+George+Orwell"
     },
     {
         name: "Pride and Prejudice",
@@ -43,7 +49,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1543868519-726d14987a56?w=400&h=600&fit=crop",
         author: "Jane Austen",
         rating: 4.7,
-        pages: 432
+        pages: 432,
+        flipkart_url: "https://www.flipkart.com/search?q=Pride+and+Prejudice+Jane+Austen",
+        amazon_url: "https://www.amazon.in/s?k=Pride+and+Prejudice+Jane+Austen"
     },
     {
         name: "The Catcher in the Rye",
@@ -53,7 +61,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "J.D. Salinger",
         rating: 4.3,
-        pages: 277
+        pages: 277,
+        flipkart_url: "https://www.flipkart.com/search?q=The+Catcher+in+the+Rye+Salinger",
+        amazon_url: "https://www.amazon.in/s?k=The+Catcher+in+the+Rye+Salinger"
     },
     {
         name: "Harry Potter and the Sorcerer's Stone",
@@ -63,7 +73,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?w=400&h=600&fit=crop",
         author: "J.K. Rowling",
         rating: 4.9,
-        pages: 309
+        pages: 309,
+        flipkart_url: "https://www.flipkart.com/search?q=Harry+Potter+Sorcerer+Stone+Rowling",
+        amazon_url: "https://www.amazon.in/s?k=Harry+Potter+Sorcerer+Stone+Rowling"
     },
     {
         name: "The Lord of the Rings",
@@ -73,7 +85,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&h=600&fit=crop",
         author: "J.R.R. Tolkien",
         rating: 4.8,
-        pages: 1216
+        pages: 1216,
+        flipkart_url: "https://www.flipkart.com/search?q=The+Lord+of+the+Rings+Tolkien",
+        amazon_url: "https://www.amazon.in/s?k=The+Lord+of+the+Rings+Tolkien"
     },
     {
         name: "Sapiens: A Brief History of Humankind",
@@ -83,7 +97,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Yuval Noah Harari",
         rating: 4.6,
-        pages: 443
+        pages: 443,
+        flipkart_url: "https://www.flipkart.com/search?q=Sapiens+Yuval+Harari",
+        amazon_url: "https://www.amazon.in/s?k=Sapiens+Yuval+Harari"
     },
     {
         name: "Atomic Habits",
@@ -93,7 +109,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1606368068092-2c4b6b6b4a3f?w=400&h=600&fit=crop",
         author: "James Clear",
         rating: 4.7,
-        pages: 320
+        pages: 320,
+        flipkart_url: "https://www.flipkart.com/search?q=Atomic+Habits+James+Clear",
+        amazon_url: "https://www.amazon.in/s?k=Atomic+Habits+James+Clear"
     },
     {
         name: "The Psychology of Money",
@@ -103,7 +121,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1543868519-726d14987a56?w=400&h=600&fit=crop",
         author: "Morgan Housel",
         rating: 4.5,
-        pages: 256
+        pages: 256,
+        flipkart_url: "https://www.flipkart.com/search?q=The+Psychology+of+Money+Housel",
+        amazon_url: "https://www.amazon.in/s?k=The+Psychology+of+Money+Housel"
     },
     {
         name: "Educated",
@@ -113,7 +133,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?w=400&h=600&fit=crop",
         author: "Tara Westover",
         rating: 4.6,
-        pages: 334
+        pages: 334,
+        flipkart_url: "https://www.flipkart.com/search?q=Educated+Tara+Westover",
+        amazon_url: "https://www.amazon.in/s?k=Educated+Tara+Westover"
     },
     {
         name: "The Midnight Library",
@@ -123,7 +145,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Matt Haig",
         rating: 4.4,
-        pages: 288
+        pages: 288,
+        flipkart_url: "https://www.flipkart.com/search?q=The+Midnight+Library+Matt+Haig",
+        amazon_url: "https://www.amazon.in/s?k=The+Midnight+Library+Matt+Haig"
     },
     {
         name: "Dune",
@@ -133,7 +157,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=400&h=600&fit=crop",
         author: "Frank Herbert",
         rating: 4.7,
-        pages: 688
+        pages: 688,
+        flipkart_url: "https://www.flipkart.com/search?q=Dune+Frank+Herbert",
+        amazon_url: "https://www.amazon.in/s?k=Dune+Frank+Herbert"
     },
     {
         name: "The Alchemist",
@@ -143,7 +169,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Paulo Coelho",
         rating: 4.5,
-        pages: 208
+        pages: 208,
+        flipkart_url: "https://www.flipkart.com/search?q=The+Alchemist+Paulo+Coelho",
+        amazon_url: "https://www.amazon.in/s?k=The+Alchemist+Paulo+Coelho"
     },
     {
         name: "Becoming",
@@ -153,7 +181,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Michelle Obama",
         rating: 4.8,
-        pages: 448
+        pages: 448,
+        flipkart_url: "https://www.flipkart.com/search?q=Becoming+Michelle+Obama",
+        amazon_url: "https://www.amazon.in/s?k=Becoming+Michelle+Obama"
     },
     {
         name: "The Subtle Art of Not Giving a F*ck",
@@ -163,7 +193,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Mark Manson",
         rating: 4.3,
-        pages: 224
+        pages: 224,
+        flipkart_url: "https://www.flipkart.com/search?q=Subtle+Art+Not+Giving+Manson",
+        amazon_url: "https://www.amazon.in/s?k=Subtle+Art+Not+Giving+Manson"
     },
     {
         name: "Rich Dad Poor Dad",
@@ -173,7 +205,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Robert Kiyosaki",
         rating: 4.2,
-        pages: 336
+        pages: 336,
+        flipkart_url: "https://www.flipkart.com/search?q=Rich+Dad+Poor+Dad+Kiyosaki",
+        amazon_url: "https://www.amazon.in/s?k=Rich+Dad+Poor+Dad+Kiyosaki"
     },
     {
         name: "The Seven Husbands of Evelyn Hugo",
@@ -183,7 +217,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Taylor Jenkins Reid",
         rating: 4.6,
-        pages: 400
+        pages: 400,
+        flipkart_url: "https://www.flipkart.com/search?q=Seven+Husbands+Evelyn+Hugo+Reid",
+        amazon_url: "https://www.amazon.in/s?k=Seven+Husbands+Evelyn+Hugo+Reid"
     },
     {
         name: "Where the Crawdads Sing",
@@ -191,9 +227,11 @@ const booksData = [
         price: 16,
         category: "mystery",
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
-        author: "Delia Owens",
+        author: "Delia Owels",
         rating: 4.7,
-        pages: 384
+        pages: 384,
+        flipkart_url: "https://www.flipkart.com/search?q=Where+Crawdads+Sing+Owels",
+        amazon_url: "https://www.amazon.in/s?k=Where+Crawdads+Sing+Owels"
     },
     {
         name: "The Silent Patient",
@@ -203,7 +241,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Alex Michaelides",
         rating: 4.4,
-        pages: 336
+        pages: 336,
+        flipkart_url: "https://www.flipkart.com/search?q=The+Silent+Patient+Michaelides",
+        amazon_url: "https://www.amazon.in/s?k=The+Silent+Patient+Michaelides"
     },
     {
         name: "Thinking, Fast and Slow",
@@ -213,7 +253,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Daniel Kahneman",
         rating: 4.5,
-        pages: 499
+        pages: 499,
+        flipkart_url: "https://www.flipkart.com/search?q=Thinking+Fast+Slow+Kahneman",
+        amazon_url: "https://www.amazon.in/s?k=Thinking+Fast+Slow+Kahneman"
     },
     {
         name: "The Four Agreements",
@@ -223,7 +265,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Don Miguel Ruiz",
         rating: 4.6,
-        pages: 160
+        pages: 160,
+        flipkart_url: "https://www.flipkart.com/search?q=Four+Agreements+Miguel+Ruiz",
+        amazon_url: "https://www.amazon.in/s?k=Four+Agreements+Miguel+Ruiz"
     },
     {
         name: "The Hunger Games",
@@ -233,7 +277,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Suzanne Collins",
         rating: 4.6,
-        pages: 374
+        pages: 374,
+        flipkart_url: "https://www.flipkart.com/search?q=The+Hunger+Games+Collins",
+        amazon_url: "https://www.amazon.in/s?k=The+Hunger+Games+Collins"
     },
     {
         name: "The Power of Habit",
@@ -243,7 +289,9 @@ const booksData = [
         image: "https://images.unsplash.com/photo-1507842217343-583f7270bfba?w=400&h=600&fit=crop",
         author: "Charles Duhigg",
         rating: 4.4,
-        pages: 371
+        pages: 371,
+        flipkart_url: "https://www.flipkart.com/search?q=The+Power+of+Habit+Duhigg",
+        amazon_url: "https://www.amazon.in/s?k=The+Power+of+Habit+Duhigg"
     }
 ];
 

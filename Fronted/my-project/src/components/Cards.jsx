@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 function Cards({ item }) {
     const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
+    const [showBuyOptions, setShowBuyOptions] = useState(false);
 
     const defaultImage = "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop&crop=center";
 
@@ -78,13 +79,38 @@ function Cards({ item }) {
                                 <span className="text-xs text-gray-500 dark:text-gray-400">{item.pages} pages</span>
                             )}
                         </div>
-                        <div className="flex justify-between items-center gap-2">
-                            <div className="border border-gray-300 rounded px-3 py-1 text-xs font-semibold text-gray-700">
+                        <div className="flex justify-between items-center gap-2 relative">
+                            <div className="border border-gray-300 rounded px-3 py-1 text-xs font-semibold text-gray-700 dark:border-gray-600 dark:text-gray-300">
                                 ${item.price}
                             </div>
-                            <button className="border border-gray-300 rounded px-3 py-1 text-xs font-semibold text-gray-700 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition cursor-pointer">
-                                Buy Now
-                            </button>
+                            <div className="relative">
+                                <button 
+                                    onClick={() => setShowBuyOptions(!showBuyOptions)}
+                                    className="border border-gray-300 rounded px-3 py-1 text-xs font-semibold text-gray-700 hover:bg-pink-500 hover:text-white hover:border-pink-500 transition cursor-pointer dark:border-gray-600 dark:text-gray-300 dark:hover:bg-pink-600"
+                                >
+                                    Buy Now ▼
+                                </button>
+                                {showBuyOptions && (
+                                    <div className="absolute top-full right-0 mt-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded shadow-lg z-10 min-w-48">
+                                        <a 
+                                            href={item.flipkart_url || "#"} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 transition border-b dark:border-gray-700 flex items-center gap-2"
+                                        >
+                                            <span>🛒</span> Flipkart
+                                        </a>
+                                        <a 
+                                            href={item.amazon_url || "#"} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-orange-50 dark:hover:bg-gray-800 transition flex items-center gap-2"
+                                        >
+                                            <span>📦</span> Amazon
+                                        </a>
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
