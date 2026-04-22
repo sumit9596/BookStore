@@ -15,7 +15,12 @@ git remote add origin https://github.com/YOUR_USERNAME/BookStore.git
 
 # Push to GitHub
 git branch -M main
-git push -u origin main# Vercel Deployment Guide for BookStore
+git push -u origin main# BookStore - Vercel Deployment
+
+## 🚀 Live Project
+**[https://book-store-alpha-mocha.vercel.app/](https://book-store-alpha-mocha.vercel.app/)**
+
+# Vercel Deployment Guide for BookStore
 
 ## Prerequisites
 - GitHub account with your project pushed to a repository

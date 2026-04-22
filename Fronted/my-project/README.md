@@ -1,4 +1,11 @@
-# React + Vite
+# BookStore
+
+A modern online bookstore application built with React, Vite, and Node.js.
+
+## 🚀 Live Link
+**[https://book-store-alpha-mocha.vercel.app/](https://book-store-alpha-mocha.vercel.app/)**
+
+## Project Overview
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
